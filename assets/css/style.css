@@ -2,6 +2,57 @@
     /* declare a variable with `--` syntax */
     --dark: #13293d;
     --light: #fff;
-    --navlink-color: #b9c6ae;
+    --border: lightgray;
+    --theme: #F24BED;
   }
 
+* {
+    margin: 0px;
+    padding: 0;
+    background-color: gray;
+}
+
+body {
+
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: var(--theme);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1 0 200px;
+    padding: 100px;
+    margin: 10px;
+    border: dashed 1px var(--border);
+}
+
+.box ::after {
+    content: attr(data-descr);
+    color: var(--theme);
+    border-color: var(--border);
+    border-style: solid;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    right: 20px;
+    bottom: 115px;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+}
